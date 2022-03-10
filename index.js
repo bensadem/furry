@@ -68,7 +68,7 @@ setTimeout(() => {
  .addField(
 `${prefix}buy-logbot`, `بوت لوق مع سيت شانل (تحديد الروم) فيه جميع انواع اللوق مع خيار حذف اللوق`) 
  .setColor("RANDOM")
- .setFooter('جميع البوتات اسطورية ولا يوجد مثلها تم عملها من قبل تاون بوت', 'https://media.discordapp.net/attachments/875076314200178700/875180425243394058/clipart576807.png?width=343&height=409');
+ .setFooter('My Prefix is : +', 'https://images-ext-2.discordapp.net/external/CDm5W3GGKeu5gLMGfc3aspz0vMDe4MYuZ99-tPCLNWQ/%3Fwidth%3D683%26height%3D683/https/images-ext-1.discordapp.net/external/bcHCcDUfjAr6CmKJlHzNuS3sfJeKZciWGyRvZ9NZtDQ/%253Fsize%253D1024/https/cdn.discordapp.com/avatars/935959168140050502/4c4746d0b96d8b18f09837c9a81da9c2.png');
  m.edit(embed)
  m.edit('The data has been revised :white_check_mark:', embed)
 }, 1500)
