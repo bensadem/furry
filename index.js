@@ -9,10 +9,11 @@ app.listen(3000, () => {
   console.log("the project is ready")
 })
 
-const db = require('quick.db');
+
+
 
 const Discord = require('discord.js');
-const quick = require('quick.db');
+
 const dbs = require('discord-buttons');
 const ytdl = require('ytdl-core');
 const ms = require('ms');
