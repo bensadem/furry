@@ -51,14 +51,14 @@ true)
  .setColor("RANDOM")
  .setFooter('My Prefix is : + ', 'https://images-ext-1.discordapp.net/external/bcHCcDUfjAr6CmKJlHzNuS3sfJeKZciWGyRvZ9NZtDQ/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/935959168140050502/4c4746d0b96d8b18f09837c9a81da9c2.png?width=683&height=683');
  m.edit(embed)
- m.edit('The data has been revised :white_check_mark:', embed)
+ m.edit('**The data has been revised **:white_check_mark:', embed)
 }, 1500)
 })
 }
 })
 client.on("message", async message => {
  if(message.content.toLowerCase() === prefix + "shop") {
- message.channel.send("Data review...").then(m =>{
+ message.channel.send("**Data review...**").then(m =>{
 setTimeout(() => {
  let embed = new Discord.MessageEmbed()
  .setTitle("Shop Panel")
