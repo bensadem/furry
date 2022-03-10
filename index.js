@@ -75,10 +75,7 @@ setTimeout(() => {
 })
 }
 })
-const Data1 = require('st.db')
-const dbhelp2 = new Data1({
-  path:'help2.json'
-})
+
 
 const price1 = 1;// غير شامل ضريبة
 const owner1 = '920362888386973697'//ايدي شخص للي تبي تحول له
@@ -130,10 +127,8 @@ client.on('message', async (message) => {
 })
 
 
-const Data = require('st.db')
-const dbhelp = new Data({
-  path:'help.json'
-})
+
+
 
 const price = 1;// غير شامل ضريبة
 const owner = '920362888386973697'//ايدي شخص للي تبي تحول له
