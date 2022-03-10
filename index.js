@@ -31,7 +31,7 @@ client.on('message', message => {
 
 client.on("message", async message => {
  if(message.content.toLowerCase() === prefix + "help") {
- message.channel.send("Data review...").then(m =>{
+ message.channel.send("**Data review...**").then(m =>{
 setTimeout(() => {
   let embed = new Discord.MessageEmbed()
  .setTitle("Help Panel")
@@ -51,7 +51,7 @@ true)
  .setColor("RANDOM")
  .setFooter('My Prefix is : + ', 'https://images-ext-1.discordapp.net/external/bcHCcDUfjAr6CmKJlHzNuS3sfJeKZciWGyRvZ9NZtDQ/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/935959168140050502/4c4746d0b96d8b18f09837c9a81da9c2.png?width=683&height=683');
  m.edit(embed)
- m.edit('**The data has been revised **:white_check_mark:', embed)
+ m.edit('**The data has been revised**:white_check_mark:', embed)
 }, 1500)
 })
 }
@@ -70,7 +70,7 @@ setTimeout(() => {
  .setColor("RANDOM")
  .setFooter('My Prefix is : +', 'https://images-ext-2.discordapp.net/external/CDm5W3GGKeu5gLMGfc3aspz0vMDe4MYuZ99-tPCLNWQ/%3Fwidth%3D683%26height%3D683/https/images-ext-1.discordapp.net/external/bcHCcDUfjAr6CmKJlHzNuS3sfJeKZciWGyRvZ9NZtDQ/%253Fsize%253D1024/https/cdn.discordapp.com/avatars/935959168140050502/4c4746d0b96d8b18f09837c9a81da9c2.png');
  m.edit(embed)
- m.edit('The data has been revised :white_check_mark:', embed)
+ m.edit('**The data has been revised** :white_check_mark:', embed)
 }, 1500)
 })
 }
@@ -183,7 +183,7 @@ client.on('message', async (message) => {
 
 client.on("message", message => {
  if(message.content.toLowerCase() === prefix + "botlist") {
- message.channel.send("Data review... <a:Loading:949611726956015686>").then(m =>{
+ message.channel.send("**Data review...** <a:Loading:949611726956015686>").then(m =>{
 setTimeout(() => {
  let embed = new Discord.MessageEmbed()
  .setTitle("Botlist")
@@ -239,7 +239,7 @@ true)
  .setColor("RANDOM")
  .setFooter('My Prefix is : + ', 'https://images-ext-1.discordapp.net/external/bcHCcDUfjAr6CmKJlHzNuS3sfJeKZciWGyRvZ9NZtDQ/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/935959168140050502/4c4746d0b96d8b18f09837c9a81da9c2.png?width=683&height=683');
  m.edit(embed)
- m.edit('The data has been revised <:yes:949605769316302868>', embed)
+ m.edit('**The data has been revised **<:yes:949605769316302868>', embed)
  message.react("<:yes:949605769316302868>");
 }, 1500)
 })
