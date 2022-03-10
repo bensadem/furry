@@ -9,7 +9,7 @@ app.listen(3000, () => {
   console.log("the project is ready")
 })
 
-
+const db = require('quick.db');
 
 const Discord = require('discord.js');
 const quick = require('quick.db');
