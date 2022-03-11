@@ -25,10 +25,21 @@ const prefix = "+"
 
 client.on('message', message => {
   if (message.content === '+ping') {
-    message.channel.send(`**Ping is ${client.ws.ping}**`)
-  }
-})
+    let embed = new MessageEmbed()
+        .setTitle(`${client.user.username} is Here!`)
+        .setDescription(`Hey **${message.author.username},** I was made by <@${developerID}> 
 
+        Bot Prefix: \`${prefix}\`
+        Invite Link: [Click Here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands)
+
+        :question: Still need help? [Click Here](https://discord.gg/cF6KqGHUfr) to join server
+        `)
+      //  .setThumbnail(client.user.displayAvatarURL())
+        .setColor("#36393F")
+
+    return message.channel.send(embed);
+  }
+  
 client.on("message", async message => {
  if(message.content.toLowerCase() === prefix + "help") {
  message.channel.send("**Data review...**").then(m =>{
