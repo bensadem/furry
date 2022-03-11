@@ -532,82 +532,11 @@ Verifiy: **${guild.verificationLevel}**`)
 channel.send(embed)
 })
 
-client.on("message", async message => {
-  let prefix;
-    if (message.author.bot || message.channel.type === "dm") return;
-        try {
-            let fetched = await db.fetch(`prefix_${message.guild.id}`);
-            if (fetched == null) {
-                prefix = bprefix
-            } else {
-                prefix = fetched
-            }
-        } catch (e) {
-            console.log(e)
-    };
-  
-   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
-  if (message.content.match(prefixMention)) {
 
-    let embed = new MessageEmbed()
-        .setTitle(`${client.user.username} is Here!`)
-        .setDescription(`Hey **${message.author.username},** I was made by <@${developerID}> 
-
-        Bot Prefix: \`${prefix}\`
-        Invite Link: [Click Here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands)
-
-        :question: Still need help? [Click Here](https://discord.gg/cF6KqGHUfr) to join server
-        `)
-      //  .setThumbnail(client.user.displayAvatarURL())
-        .setColor("#36393F")
-
-    return message.channel.send(embed);
-  }
-
-
-    
-  if (message.author.bot) return;
-  if (!message.guild) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  if(cooldown.has(message.author.id)){
-    return message.channel.send(`**${message.author.username}** <a:TIMER:944677567506567269> ${client.lang.share3} \`\`3\`\``)
-  }
-  cooldown.add(message.author.id);
-  setTimeout(() => {
-cooldown.delete(message.author.id)}, cdseconds * 1000)
-
-  if (!message.member)
-    message.member = message.guild.fetchMember(message);
-
-
-  const args = message.content
-    .slice(prefix.length)
-    .trim()
-    .split(/ +/g);
-  const cmd = args.shift().toLowerCase();
-
-  if (cmd.length === 0) return;
-
-  let command = client.commands.get(cmd);
-
-  if (!command) command = client.commands.get(client.aliases.get(cmd));
-
-  if (command.premium) {
-    let guild = await db.get(`premium_${message.guild.id}`);
-//`You can use this command in only premium server. \n **Want to make your server premium?** Donate US!: https://discord.gg/YkUXHYdyes`
-
-    if (!guild) {
-      return message.channel.send(`${client.lang.index}`)
-    }
-
-  }
-
-
-  if (command) command.run(client, message, args);
-  
-
+client.on('message' , saud=> {
+if(saud.content === `<@!${client.user.id}>>`){
+saud.channel.send(`**My prefix is +**`)
+}
 });
-
 
 client.login(process.env.token); 
